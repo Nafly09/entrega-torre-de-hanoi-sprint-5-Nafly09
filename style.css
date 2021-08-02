@@ -6,8 +6,12 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, summary
     list-style-type: none;
 }
 
+body {
+    padding: 10px;
+}
+
 #main{
-    margin: 50% 0;
+    margin: 30% 0;
 }
 
 #title{
@@ -28,7 +32,7 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, summary
     justify-content: flex-end;
     align-items: center;
     height: 300px;
-    width: 144px;
+    width: 32%
 }
 
 #torres{
@@ -40,7 +44,7 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, summary
 
 #disco1{
     background-color: blue;
-    width: 50%;
+    width: 45%;
     height: 30px;
     border: solid black;
     border-width: 2px;
@@ -49,7 +53,7 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, summary
 
 #disco2{
     background-color: purple;
-    width: 70%;
+    width: 60%;
     height: 30px;
     border: solid black;
     border-width: 2px;
@@ -58,7 +62,7 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, summary
 
 #disco3{
     background-color: green;
-    width: 80%;
+    width: 75%;
     height: 30px;
     border: solid black;
     border-width: 2px;
@@ -67,9 +71,39 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, summary
 
 #disco4{
     background-color: red;
-    width: 100%;
+    width: 90%;
     height: 30px;
     border: solid black;
     border-width: 2px;
     border-radius: 10px;
 }
+
+
+ @media screen and (min-width: 678px){
+    #main{
+        margin: 8% 0;
+    }
+    #discos{ 
+        width: 32.5%;
+    }
+
+    #disco1{
+        width: 25%;
+        height: 40px;
+    }
+
+    #disco2{
+        width: 40%;
+        height: 40px;
+    }
+
+    #disco3{
+        width: 55%;
+        height: 40px;
+    }
+
+    #disco4{
+        width: 70%;
+        height: 40px;
+    }
+    }
