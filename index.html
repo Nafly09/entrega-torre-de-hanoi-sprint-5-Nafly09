@@ -13,17 +13,23 @@
 
 <body id="body">
     <main id="main">
-        <div id="discos">
-            <div id="disco1"></div>
-            <div id="disco2"></div>
-            <div id="disco3"></div>
-            <div id="disco4"></div>
+        <div id="discos" class="boxTorres" ondrop="drop(event, this)" ondragover="allowDrop(event)">
+            <div id="disco1" class='disco' draggable="true" ondragstart="drag(event)"></div>
+            <div id="disco2" class='disco' draggable="true" ondragstart="drag(event)"></div>
+            <div id="disco3" class='disco' draggable="true" ondragstart="drag(event)"></div>
+            <div id="disco4" class='disco' draggable="true" ondragstart="drag(event)"></div>
         </div>
 
-        <div id="torres">
-            <div id="torre1" class="torres"></div>
-            <div id="torre2" class="torres"></div>
-            <div id="torre3" class="torres"></div>
+        <div id="boxTorres">
+            <div id="boxTorre1" class="boxTorres" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+            <div id="boxTorre2" class="boxTorres" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+            <div id="boxTorre3" class="boxTorres" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+
+            <div id="torres">
+                <div id="torre1" class="torres"></div>
+                <div id="torre2" class="torres"></div>
+                <div id="torre3" class="torres"></div>
+            </div>
         </div>
 
     </main>
