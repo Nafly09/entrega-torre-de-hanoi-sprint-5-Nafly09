@@ -18,6 +18,7 @@ body {
     text-align: center;
 }
 
+/* ESTILIZAÇÃO DAS TORRES E SEU BLOCOS */
 .torres{
     background-color: black;
     height: 300px;
@@ -26,32 +27,21 @@ body {
     z-index: -1;
 }
 
-#boxTorres{
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-    z-index: 1;
-    height: 300px;
-}
-
-#discos{
-    z-index: 2;
-    position: absolute;
-    display: flex;
-    flex-direction:column;
-    justify-content: flex-end;
-    align-items: center;
-    height: 300px;
-    width: 32%
-}
-
-#torres{
+#blocoTorres{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     position: absolute;
     z-index: -1;
     width: 100vw;
+}
+
+#blocoBoxTorres{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    z-index: 1;
+    height: 300px;
 }
 
 .boxTorres{
@@ -61,6 +51,18 @@ body {
     align-items: center;
     flex-direction: column;
     position: relative;
+}
+
+/* ESTILIZAÇÃO DOS DISCOS E SEUS BLOCOS */
+#blocoDiscos{
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 300px;
+    width: 32%
 }
 
 #disco1{

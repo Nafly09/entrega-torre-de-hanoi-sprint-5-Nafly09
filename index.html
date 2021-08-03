@@ -13,24 +13,27 @@
 
 <body id="body">
     <main id="main">
-        <div id="discos" class="boxTorres" ondrop="drop(event, this)" ondragover="allowDrop(event)">
+        <!-- TODOS OS DISCOS -->
+        <section id="blocoDiscos" class="boxTorres" ondrop="drop(event, this)" ondragover="allowDrop(event)">
             <div id="disco1" class='disco' draggable="true" ondragstart="drag(event)"></div>
             <div id="disco2" class='disco' draggable="true" ondragstart="drag(event)"></div>
             <div id="disco3" class='disco' draggable="true" ondragstart="drag(event)"></div>
             <div id="disco4" class='disco' draggable="true" ondragstart="drag(event)"></div>
-        </div>
-
-        <div id="boxTorres">
+        </section>
+        
+        <!-- BOX DAS TORRES (PARA PODER ENVIAR UM DISCO DE UMA TORRE PARA OUTRA) -->
+        <section id="blocoBoxTorres">
             <div id="boxTorre1" class="boxTorres" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
             <div id="boxTorre2" class="boxTorres" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
             <div id="boxTorre3" class="boxTorres" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
-
-            <div id="torres">
+           
+            <!-- TODAS AS TORRES -->
+            <section id="blocoTorres">
                 <div id="torre1" class="torres"></div>
                 <div id="torre2" class="torres"></div>
                 <div id="torre3" class="torres"></div>
-            </div>
-        </div>
+            </section>
+        </section>
 
     </main>
     <script src="script.js"></script>
