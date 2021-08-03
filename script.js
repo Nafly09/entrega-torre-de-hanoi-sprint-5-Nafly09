@@ -3,6 +3,9 @@
 // let discsOnTower3 = [null, null, null, null, null, null, null, null];
 
 // PEGANDO OS ELEMENTOS PRO DOM
+
+const countSection = document.getElementById('countSection')
+const buttons = document.getElementById('buttons')
 let blocoDeDiscos = document.getElementById('blocoDiscos');
 let blocoDeTorres = document.getElementById('blocoTorres');
 let blocoBoxTorres = document.getElementById('blocoBoxTorres');
@@ -13,7 +16,7 @@ function createDiscs(){
         let discos = document.createElement('div');
         discos.setAttribute('id',`disco${i}`);
         discos.classList.add('discos');
-        blocoDeDiscos.appendChild(discos)
+        blocoDeDiscos.appendChild(discos);
     }
     return blocoDeDiscos
 }
@@ -36,3 +39,29 @@ function createTowers(){
 }
 
 createTowers();
+
+
+
+function createMoveCounter(){
+    const moveCounter = document.createElement('h2')
+    moveCounter.innerHTML = 'Seu número de movimentos'
+    moveCounter.classList.add('moveCounter');
+    countSection.appendChild(moveCounter) 
+    return countSection
+}
+
+createMoveCounter()
+
+function createButton(){
+    const restartButton = document.createElement('button');
+    restartButton.innerHTML = 'Reiniciar';
+    restartButton.classList.add('restartButton');
+    buttons.appendChild(restartButton);
+    const undoMoveButton = document.createElement('button');
+    undoMoveButton.innerHTML = 'Desfazer';
+    undoMoveButton.classList.add('undoMoveButton');
+    buttons.appendChild(undoMoveButton);
+    return buttons
+}
+
+createButton()
