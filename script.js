@@ -41,7 +41,6 @@ function createTowers(){
 createTowers();
 
 
-
 function createMoveCounter(){
     const moveCounter = document.createElement('h2')
     moveCounter.innerHTML = 'Seu número de movimentos'
