@@ -1,0 +1,202 @@
+html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, summary, footer, main, aside, section{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    list-style-type: none;
+}
+
+.none {
+    display: none;
+}
+
+body {  
+    padding-top: 10px;
+    font-family: 'Permanent Marker', cursive;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(204,204,208,1) 100%, rgba(0,212,255,1) 100%);
+}
+
+
+
+#main{
+    margin: 8% 0;
+}
+
+#title{
+    text-align: center;
+}
+
+h1, h2{
+    font-size: 20px;
+}
+
+/* ESTILIZAÇÃO DAS TORRES E SEU BLOCOS */
+.torres{
+    background-color: black;
+    height: 300px;
+    width: 10px;
+    position: relative;
+    z-index: -1;
+}
+
+#blocoTorres{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+}
+
+#blocoBoxTorres{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    z-index: 1;
+    height: 300px;
+}
+
+.boxTorres{
+    width: 34%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+/* ESTILIZAÇÃO DOS DISCOS E SEUS BLOCOS */
+#blocoDiscos{
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 300px;
+    width: 33%
+}
+
+.discos{
+    height: 30px;
+    border: solid black;
+    border-width: 2px;
+    border-radius: 10px;
+    display: block;
+}
+
+#disco1{
+    background-color: blue;
+    width: 25%;
+    height: 30px;
+    border: solid black;
+    border-width: 2px;
+    border-radius: 10px;
+    display: block;
+}
+
+#disco2{
+    background-color: purple;
+    width: 35%;
+    height: 30px;
+    border: solid black;
+    border-width: 2px;
+    border-radius: 10px;
+    display: block;
+}
+
+#disco3{
+    background-color: green;
+    width: 50%;
+    height: 30px;
+    border: solid black;
+    border-width: 2px;
+    border-radius: 10px;
+    display: block;
+}
+
+#disco4{
+    background-color: red;
+    width: 65%;
+    height: 30px;
+    border: solid black;
+    border-width: 2px;
+    border-radius: 10px;
+    display: block;
+}
+
+/*SEÇÃO FINAL*/
+
+#finalSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.restartButton{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 7px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.moveCounter{
+    padding: 30px 0 20px 0;
+    text-align: center;
+}
+
+p{
+    color:red;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+ @media screen and (min-width: 768px){
+    #main{
+        margin: 8% 0;
+    }
+    #discos{ 
+        width: 32.5%;
+    }
+
+    #disco1{
+        width: 15%;
+        height: 40px;
+    }
+
+    #disco2{
+        width: 25%;
+        height: 40px;
+    }
+
+    #disco3{
+        width: 40%;
+        height: 40px;
+    }
+
+    #disco4{
+        width: 55%;
+        height: 40px;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    .restartButton{
+        width: 150px;
+    }
+
+    p{
+        font-size: 25px;
+    }
+
+    .boxTorres{
+        width: 24%;
+    }
+    
+}
