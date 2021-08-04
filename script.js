@@ -140,20 +140,25 @@ let blocksCondition = blocoDeDiscos.childElementCount
 
 function youWin(){
     if(document.getElementById('boxTorre1').childElementCount === blocksCondition){
-        win = document.createElement('p');
-        win.innerText = 'Você venceu!'
-        winSection.appendChild(win)
+        winSection.classList.replace('hidden', 'win')
+        blocoDeDiscos.style.zIndex = 0
         return winSection
     }
 }
+
 
 //FUNÇÃO DE REINICIAR PARTIDA
 
 restartButton.addEventListener('click', restart)
 
 function restart(){
+    blocoDeDiscos.style.zIndex = 2
     win.innerText = ''
     blocoDeDiscos.innerHTML = ''
+    if(document.getElementById('win') !== null){
+        document.getElementById('win').classList.replace('win', 'hidden');
+    }
+
     for(i = 1; i < 3; i++){
         document.getElementById(`boxTorre${i}`).innerHTML = ''
     }
