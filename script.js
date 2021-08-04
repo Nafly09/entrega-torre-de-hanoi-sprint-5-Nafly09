@@ -136,9 +136,10 @@ createFinalSection()
 
 //FUNÇÃO DE VITÓRIA
 let win = '';
+let blocksCondition = blocoDeDiscos.childElementCount
 
 function youWin(){
-    if(document.getElementById('boxTorre1').childElementCount === blocoDeDiscos.childElementCount){
+    if(document.getElementById('boxTorre1').childElementCount === blocksCondition){
         win = document.createElement('p');
         win.innerText = 'Você venceu!'
         winSection.appendChild(win)
