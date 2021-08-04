@@ -11,7 +11,7 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, summary
 }
 
 body {
-    padding: 10px;
+    padding-top: 10px;
     font-family: 'Permanent Marker', cursive;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(204,204,208,1) 100%, rgba(0,212,255,1) 100%);
 }
@@ -22,6 +22,10 @@ body {
 
 #title{
     text-align: center;
+}
+
+h1, h2{
+    font-size: 20px;
 }
 
 /* ESTILIZAÇÃO DAS TORRES E SEU BLOCOS */
@@ -111,9 +115,15 @@ body {
     display: block;
 }
 
-/*SEÇÕES FINAIS*/
+/*SEÇÃO FINAL*/
 
-.restartButton, .undoMoveButton{
+#finalSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.restartButton{
     background-color: black;
     color: white;
     font-weight: bold;
@@ -123,13 +133,14 @@ body {
     cursor: pointer;
 }
 
-#buttons{
-    display: flex;
-    justify-content: space-evenly;
-}
-
 .moveCounter{
     padding: 30px 0 20px 0;
+    text-align: center;
+}
+
+p{
+    color:red;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -161,4 +172,17 @@ body {
         width: 70%;
         height: 40px;
     }
+
+    h1{
+        font-size: 30px;
+    }
+
+    .restartButton{
+        width: 150px;
+    }
+
+    p{
+        font-size: 25px;
+    }
+    
     }

@@ -2,8 +2,8 @@ let currentDisc = ''
 
 // PEGANDO OS ELEMENTOS PRO DOM
 
-const countSection = document.getElementById('countSection')
-const buttons = document.getElementById('buttons')
+const winSection = document.getElementById('win');
+const finalSection = document.getElementById('finalSection');
 let blocoDeDiscos = document.getElementById('blocoDiscos');
 let blocoDeTorres = document.getElementById('blocoTorres');
 let blocoBoxTorres = document.getElementById('blocoBoxTorres');
@@ -16,13 +16,12 @@ function createDiscs(){
         let discos = document.createElement('div');
         discos.setAttribute('id',`disco${i}`);
         discos.classList.add('discos');
-<<<<<<< HEAD
         blocoDeDiscos.appendChild(discos);
-=======
         // ADICIONANDO UM LISTENER DE CLICK EM CADA DISCO
         discos.addEventListener('click', function get(event){
             if(event.currentTarget === blocoDeDiscos.firstElementChild){
                 currentDisc = event.currentTarget
+                console.log(currentDisc = event.currentTarget)
             } else if(event.currentTarget === document.getElementById('boxTorre1').firstElementChild){
                 currentDisc = event.currentTarget
             } else if(event.currentTarget === document.getElementById('boxTorre2').firstElementChild){
@@ -35,12 +34,12 @@ function createDiscs(){
         })
         //COLOCANDO OS DISCOS NO BLOCO DE DISCOS
         blocoDeDiscos.appendChild(discos)
->>>>>>> Development
     }
     return blocoDeDiscos
 }
 createDiscs()
 
+let count = 0
 
 // FUNÇÃO PARA CRIAR AS TORRES
 function createTowers(){
@@ -58,25 +57,23 @@ function createTowers(){
 
             if(event.currentTarget.firstElementChild === null){
                 event.currentTarget.prepend(currentDisc);
+                count++
             }
             
             if(currentDisc.clientWidth < event.currentTarget.firstElementChild.clientWidth){
                 event.currentTarget.prepend(currentDisc);
-            }
-            console.log(currentDisc)
-            if(document.getElementById('boxTorre1').childElementCount === 4){
-                alert ('Você Venceu')
-            }
-            
+                count++
+            }console.log(count)
+            whoWin()
         })
 
         blocoDeDiscos.addEventListener('click', function getTowerDisc(event){
             if(currentDisc.clientWidth < event.currentTarget.firstElementChild.clientWidth){
                 event.currentTarget.prepend(currentDisc);
             }
-            if(document.getElementById('boxTorre1').childElementCount === 4){
-                alert ('Você Venceu')
-            }
+            // if(document.getElementById('boxTorre1').childElementCount === 4){
+            //     alert ('Você Venceu')
+            // }
         })
 
         //COLOCANDO O AS TORRES E O BOX DAS TORRES EM SUAS DIV'S.
@@ -88,27 +85,41 @@ function createTowers(){
 
 createTowers();
 
+//FUNÇÃO DE CRIAÇÃO DO BOTÃO E NÚMERO DE MOVIMENTOS
+let restartButton = ''
 
-function createMoveCounter(){
+function createFinalSection(){
     const moveCounter = document.createElement('h2')
-    moveCounter.innerHTML = 'Seu número de movimentos'
+    moveCounter.innerHTML = 'Seu número de movimentos: ' + count
     moveCounter.classList.add('moveCounter');
-    countSection.appendChild(moveCounter) 
-    return countSection
-}
-
-createMoveCounter()
-
-function createButton(){
-    const restartButton = document.createElement('button');
+    finalSection.appendChild(moveCounter) 
+    restartButton = document.createElement('button');
     restartButton.innerHTML = 'Reiniciar';
     restartButton.classList.add('restartButton');
-    buttons.appendChild(restartButton);
-    const undoMoveButton = document.createElement('button');
-    undoMoveButton.innerHTML = 'Desfazer';
-    undoMoveButton.classList.add('undoMoveButton');
-    buttons.appendChild(undoMoveButton);
-    return buttons
+    finalSection.appendChild(restartButton);
+    return finalSection
 }
 
-createButton()
+createFinalSection()
+
+let win = ''
+
+//FUNÇÃO DE VITÓRIA
+function whoWin(){
+    if(document.getElementById('boxTorre1').childElementCount === 4){
+        win = document.createElement('p');
+        win.innerText = 'Você venceu!'
+        winSection.appendChild(win)
+        return winSection
+    }
+}
+
+//FUNÇÃO DE REINICIAR PARTIDA
+
+restartButton.addEventListener('click', restart)
+
+function restart(){
+    win.innerText = ''
+    createDiscs()  //nao funciona so estava tentando
+}
+
