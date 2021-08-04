@@ -21,12 +21,11 @@ function createDiscs(){
         discos.addEventListener('click', function get(event){
             if(event.currentTarget === blocoDeDiscos.firstElementChild){
                 currentDisc = event.currentTarget
-                console.log(currentDisc = event.currentTarget)
             } else if(event.currentTarget === document.getElementById('boxTorre1').firstElementChild){
                 currentDisc = event.currentTarget
             } else if(event.currentTarget === document.getElementById('boxTorre2').firstElementChild){
                 currentDisc = event.currentTarget
-            }
+            } 
         })
         //ADICIONANDO UM LISTENER PARA PERMITIR QUE O DISCO TAMBÉM RETORNE PARA TORRE INICIAL
         blocoDeDiscos.addEventListener('click', function getTower(event){
@@ -37,6 +36,7 @@ function createDiscs(){
     }
     return blocoDeDiscos
 }
+
 createDiscs()
 
 let count = 0
@@ -63,7 +63,7 @@ function createTowers(){
             if(currentDisc.clientWidth < event.currentTarget.firstElementChild.clientWidth){
                 event.currentTarget.prepend(currentDisc);
                 count++
-            }console.log(count)
+            }   console.log(count)
             whoWin()
         })
 
@@ -71,9 +71,10 @@ function createTowers(){
             if(currentDisc.clientWidth < event.currentTarget.firstElementChild.clientWidth){
                 event.currentTarget.prepend(currentDisc);
             }
-            // if(document.getElementById('boxTorre1').childElementCount === 4){
-            //     alert ('Você Venceu')
-            // }
+            //  if(document.getElementById('boxTorre1').childElementCount === 4){
+            //      alert ('Você Venceu')
+            //  }
+            
         })
 
         //COLOCANDO O AS TORRES E O BOX DAS TORRES EM SUAS DIV'S.
@@ -86,11 +87,11 @@ function createTowers(){
 createTowers();
 
 //FUNÇÃO DE CRIAÇÃO DO BOTÃO E NÚMERO DE MOVIMENTOS
-let restartButton = ''
+let restartButton = '';
 
 function createFinalSection(){
     const moveCounter = document.createElement('h2')
-    moveCounter.innerHTML = 'Seu número de movimentos: ' + count
+    moveCounter.innerHTML = `Número de movimentos: ${count}`
     moveCounter.classList.add('moveCounter');
     finalSection.appendChild(moveCounter) 
     restartButton = document.createElement('button');
@@ -102,9 +103,10 @@ function createFinalSection(){
 
 createFinalSection()
 
-let win = ''
 
 //FUNÇÃO DE VITÓRIA
+let win = '';
+
 function whoWin(){
     if(document.getElementById('boxTorre1').childElementCount === 4){
         win = document.createElement('p');
@@ -120,6 +122,4 @@ restartButton.addEventListener('click', restart)
 
 function restart(){
     win.innerText = ''
-    createDiscs()  //nao funciona so estava tentando
 }
-
