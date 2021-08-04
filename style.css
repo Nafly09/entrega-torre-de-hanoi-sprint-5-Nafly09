@@ -19,7 +19,7 @@ body {
 
 
 #main{
-    margin: 30% 0;
+    margin: 8% 0;
 }
 
 #title{
@@ -74,12 +74,20 @@ h1, h2{
     justify-content: flex-end;
     align-items: center;
     height: 300px;
-    width: 32%
+    width: 33%
+}
+
+.discos{
+    height: 30px;
+    border: solid black;
+    border-width: 2px;
+    border-radius: 10px;
+    display: block;
 }
 
 #disco1{
     background-color: blue;
-    width: 45%;
+    width: 25%;
     height: 30px;
     border: solid black;
     border-width: 2px;
@@ -89,7 +97,7 @@ h1, h2{
 
 #disco2{
     background-color: purple;
-    width: 60%;
+    width: 35%;
     height: 30px;
     border: solid black;
     border-width: 2px;
@@ -99,7 +107,7 @@ h1, h2{
 
 #disco3{
     background-color: green;
-    width: 75%;
+    width: 50%;
     height: 30px;
     border: solid black;
     border-width: 2px;
@@ -109,7 +117,7 @@ h1, h2{
 
 #disco4{
     background-color: red;
-    width: 90%;
+    width: 65%;
     height: 30px;
     border: solid black;
     border-width: 2px;
@@ -147,7 +155,7 @@ p{
 }
 
 
- @media screen and (min-width: 678px){
+ @media screen and (min-width: 768px){
     #main{
         margin: 8% 0;
     }
@@ -156,22 +164,22 @@ p{
     }
 
     #disco1{
-        width: 25%;
+        width: 15%;
         height: 40px;
     }
 
     #disco2{
-        width: 40%;
+        width: 25%;
         height: 40px;
     }
 
     #disco3{
-        width: 55%;
+        width: 40%;
         height: 40px;
     }
 
     #disco4{
-        width: 70%;
+        width: 55%;
         height: 40px;
     }
 
@@ -186,5 +194,9 @@ p{
     p{
         font-size: 25px;
     }
-    
+
+    .boxTorres{
+        width: 24%;
     }
+    
+}
